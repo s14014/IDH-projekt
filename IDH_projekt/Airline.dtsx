@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{DAF6F635-1341-4DAD-A817-28386141972B}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{799C393B-6462-4945-96F1-0FD11973B817}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4464,39 +4464,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="290,42"
+          Size="278.4,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline"
           TopLeft="232,206" />
         <NodeLayout
-          Size="277,42"
+          Size="265.6,41.6"
           Id="Package\Execute SQL Task - cleaning Dim Airline"
-          TopLeft="112,53" />
+          TopLeft="235.333328432507,65.1333334297604" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="250.5,95">
+          TopLeft="369.666664216253,106.73333342976">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126.5,111"
+              EndConnector="0,99.2666665702396"
               Start="0,0"
-              End="126.5,103.5">
+              End="0,91.7666665702396">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.5"
-                    Point2="0,55.5"
-                    Point3="4,55.5" />
-                  <mssgle:LineSegment
-                    End="122.5,55.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="122.5,55.5"
-                    Point2="126.5,55.5"
-                    Point3="126.5,59.5" />
-                  <mssgle:LineSegment
-                    End="126.5,103.5" />
+                    End="0,91.7666665702396" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4514,111 +4502,111 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 1"
           TopLeft="426,256" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 5"
           TopLeft="446,1375" />
         <NodeLayout
-          Size="206,42"
+          Size="206.4,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - no Alias"
           TopLeft="225,1278" />
         <NodeLayout
-          Size="209,42"
+          Size="208.8,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - no ICAO"
           TopLeft="238,996" />
         <NodeLayout
-          Size="192,42"
+          Size="192,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - Alias"
           TopLeft="415,1185" />
         <NodeLayout
-          Size="209,42"
+          Size="208.8,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - Active N"
           TopLeft="547,86" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 7"
           TopLeft="463,1950" />
         <NodeLayout
-          Size="193,42"
+          Size="192.8,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - IATA"
           TopLeft="425,1468" />
         <NodeLayout
-          Size="208,42"
+          Size="208,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - Active Y"
           TopLeft="254,432" />
         <NodeLayout
-          Size="207,42"
+          Size="207.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - no IATA"
           TopLeft="211,1555" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 4"
           TopLeft="434,1096" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 3"
           TopLeft="432,812" />
         <NodeLayout
-          Size="208,42"
+          Size="208,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - Active Y"
           TopLeft="388,338" />
         <NodeLayout
-          Size="207,42"
+          Size="207.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - Country"
           TopLeft="424,1762" />
         <NodeLayout
-          Size="208,42"
+          Size="208,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - Active N"
           TopLeft="241,138" />
         <NodeLayout
-          Size="221,42"
+          Size="220.8,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - no Country"
           TopLeft="201,1864" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 2"
           TopLeft="426,520" />
         <NodeLayout
-          Size="254,42"
+          Size="243.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\OLE DB Destination - upload Airline"
           TopLeft="404,2070" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Union All - 6"
           TopLeft="456,1659" />
         <NodeLayout
-          Size="216,42"
+          Size="208,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Flat File Source - airline_dat"
           TopLeft="539,9" />
         <NodeLayout
-          Size="222,42"
+          Size="222.4,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Derived Column - no Callsign"
           TopLeft="242,732" />
         <NodeLayout
-          Size="207,42"
+          Size="207.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - Callsign"
           TopLeft="385,611" />
         <NodeLayout
-          Size="195,42"
+          Size="195.2,41.6"
           Id="Package\Data Flow Task - uploud data to Dim Airline\Conditional Split - ICAO"
           TopLeft="403,905" />
         <EdgeLayout
           Id="Package\Data Flow Task - uploud data to Dim Airline.Paths[Union All Output 16]"
-          TopLeft="531.75,1992">
+          TopLeft="529.1,1991.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="0,78.4000000000001"
               Start="0,0"
-              End="0,70.5">
+              End="0,70.9000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,70.9000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4815,7 +4803,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-92.2784309895835,80.9260312944523,50.3901953125,9.7490234375"
+              BoundingBox="-113.061764157348,92.62157798709,50.3901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5121,18 +5109,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task - uploud data to Dim Airline.Paths[Flat File Source Output]"
-          TopLeft="649.25,51">
+          TopLeft="643,50.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35"
+              EndConnector="8.39999999999998,35.4"
               Start="0,0"
-              End="0,27.5">
+              End="8.39999999999998,27.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,13.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7"
+                    Point2="0,17.7"
+                    Point3="4,17.7" />
+                  <mssgle:LineSegment
+                    End="4.39999999999998,17.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.39999999999998,17.7"
+                    Point2="8.39999999999998,17.7"
+                    Point3="8.39999999999998,21.7" />
+                  <mssgle:LineSegment
+                    End="8.39999999999998,27.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5447,7 +5447,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-77.743984375,-15.470703125,57.48796875,9.470703125"
+              BoundingBox="-169.377317542765,28.4916097857029,57.48796875,9.470703125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
