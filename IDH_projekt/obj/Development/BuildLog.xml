@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IDH_projekt</Name>
-    <LastWriteTime>2021-12-19T01:17:31.5811536Z</LastWriteTime>
+    <LastWriteTime>2021-12-31T14:14:14.0953044Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Airline.dtsx</Name>
-      <LastWriteTime>2021-12-19T01:17:31.5085125Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T13:54:52.2703986Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Airport.dtsx</Name>
+      <LastWriteTime>2021-12-31T14:15:25.8124484Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

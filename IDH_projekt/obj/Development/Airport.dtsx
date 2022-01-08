@@ -1,0 +1,1994 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/30/2021 3:05:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KASPISEK"
+  DTS:CreatorName="KASPISEK\Tobiasz Gąska"
+  DTS:DTSID="{9A9D2FA6-9115-4E2B-9D9D-B7B4DD8DBB10}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{00F3C465-5E39-4E39-BBDA-7C38B432B1CA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[airport_dat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2C823A3E-8FFE-4A99-9C33-DE01ACD9C1C4}"
+      DTS:ObjectName="airport_dat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Tobiasz Gąska\Documents\PJWSTK\idh_project\airports.dat.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="airport_id"
+              DTS:DTSID="{68B2B242-368D-47DA-BF59-E0410CF64E0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="72"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{04C4FA24-BF80-4C89-90EF-304C9846AA4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="33"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{08C919A7-4AD9-4375-955F-C82B1AA96CD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="32"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{98613943-FF90-4BFA-A51F-3B7344861083}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="iata"
+              DTS:DTSID="{6F037B93-DF5D-4577-9E5B-8FD8E0733745}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="icao"
+              DTS:DTSID="{40BF2144-A308-4A71-B786-B4C1175FE3EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{AF31913E-A3D0-435B-A002-E9FB1CD10766}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="21"
+              DTS:DataType="129"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{7D5734D3-BC68-49A3-902F-9D66EBCCBB36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="altitude"
+              DTS:DTSID="{0FD6EB60-4BF7-4FD6-88DE-99B05C6CDF34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timezone"
+              DTS:DTSID="{F3E7A8EB-CE62-472F-B064-4A075E196E51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dst"
+              DTS:DTSID="{75A4C88A-37F8-45BC-926B-AA15258A93E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tz_database_timezone"
+              DTS:DTSID="{AB57FFE7-1363-45EC-BA08-4C701E94A0CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="type"
+              DTS:DTSID="{77AE1987-FC90-4CBC-8CAE-DF7669A320B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="source"
+              DTS:DTSID="{14E2265E-2869-408D-8812-F36D9CCE0996}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[KASPISEK.idh_project]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7BCA1A64-5492-4D61-B364-22248156F720}"
+      DTS:ObjectName="KASPISEK.idh_project">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=KASPISEK;Initial Catalog=idh_project;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - upload data to Dim Airport"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4517027E-2C78-449B-BDFB-BC97C5094CEA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - upload data to Dim Airport"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source - airport_dat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[airport_dat]"
+                  connectionManagerRefId="Package.ConnectionManagers[airport_dat]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[AirportID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[airport_id]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[AirportID]"
+                      name="AirportID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      length="72"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      length="33"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="32"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[IATA]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[iata]"
+                      length="3"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[IATA]"
+                      name="IATA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[ICAO]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[icao]"
+                      length="4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[ICAO]"
+                      name="ICAO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Latitude]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      length="20"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Longitude]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      length="21"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Altitude]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[altitude]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Altitude]"
+                      name="Altitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Timezone]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[timezone]"
+                      length="5"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Timezone]"
+                      name="Timezone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DST]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[dst]"
+                      length="20"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DST]"
+                      name="DST"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DatabseTimezone]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[tz_database_timezone]"
+                      length="30"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DatabseTimezone]"
+                      name="DatabseTimezone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Type]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      length="7"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Source]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[source]"
+                      length="11"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Source]"
+                      name="Source"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[airport_id]"
+                      dataType="i2"
+                      name="airport_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="72"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      codePage="65001"
+                      dataType="str"
+                      length="33"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[iata]"
+                      codePage="65001"
+                      dataType="str"
+                      length="3"
+                      name="iata" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[icao]"
+                      codePage="65001"
+                      dataType="str"
+                      length="4"
+                      name="icao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="21"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[altitude]"
+                      dataType="i2"
+                      name="altitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[timezone]"
+                      codePage="65001"
+                      dataType="str"
+                      length="5"
+                      name="timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[dst]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="dst" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[tz_database_timezone]"
+                      codePage="65001"
+                      dataType="str"
+                      length="30"
+                      name="tz_database_timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      codePage="65001"
+                      dataType="str"
+                      length="7"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].ExternalColumns[source]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      name="source" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[AirportSt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">65001</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[KASPISEK.idh_project]"
+                  connectionManagerRefId="Package.ConnectionManagers[KASPISEK.idh_project]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="72"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="33"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IATA]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="IATA"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[IATA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ICAO]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="ICAO"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[ICAO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="21"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Altitude]"
+                      cachedDataType="i2"
+                      cachedName="Altitude"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Altitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Timezone]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Timezone"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Timezone]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DST]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DST"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Type]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Source]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Source"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Source]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DatabseTimezone]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="DatabseTimezone"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DatabseTimezone]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AirportID]"
+                      cachedDataType="i2"
+                      cachedName="AirportID"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[AirportID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="iata" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="icao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      dataType="r8"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      dataType="r8"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
+                      dataType="i4"
+                      name="altitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
+                      dataType="r8"
+                      name="timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="dst" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="tz_database_timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="source" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim Airport\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        if (Row.DST == "E")
+        {
+            Row.DST= "Europe";
+        }else if (Row.DST == "A")
+        {
+            Row.DST = "US / Canada";
+        }else if (Row.DST == "S")
+        {
+            Row.DST = "South America";
+        }else if (Row.DST == "O")
+        {
+            Row.DST = "Australia";
+        }else if (Row.DST == "Z")
+        {
+            Row.DST = "New Zealand";
+        }else if (Row.DST == "N" || Row.DST == "U")
+        {
+            Row.DST = "Unknown value";
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String DST
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool DST_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Settings.get_Default():SC_46710cbe7092495c8ad679c58a0cc830.Properties.Sett" +
+    "ings")]
+
+namespace SC_46710cbe7092495c8ad679c58a0cc830.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_46710cbe7092495c8ad679c58a0cc830.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_46710cbe7092495c8ad679c58a0cc830</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_46710cbe7092495c8ad679c58a0cc830</msb:DisplayName>
+    <msb:ProjectId>{B0FC9429-64E2-4F96-BB69-261BC4C0FED3}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_46710cbe7092495c8ad679c58a0cc830.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_46710cbe7092495c8ad679c58a0cc830")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_46710cbe7092495c8ad679c58a0cc830")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_46710cbe7092495c8ad679c58a0cc830.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCF6CB85-616C-449E-AF85-15F5F25A0A08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_46710cbe7092495c8ad679c58a0cc830</RootNamespace>
+    <AssemblyName>SC_46710cbe7092495c8ad679c58a0cc830</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_46710cbe7092495c8ad679c58a0cc830.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHkQz2EAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAojIA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFAyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAqBIAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACE
+MgAAAAAAAEgAAAACAAUAXCIAADwPAAABAAAAAAAAAJgxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAgDGAAAAAAAAAANvBAAABnIBAABwKBAAAAosDANyBQAA
+cG8FAAAGKgNvBAAABnITAABwKBAAAAosDANyFwAAcG8FAAAGKgNvBAAABnIvAABwKBAAAAosDANy
+MwAAcG8FAAAGKgNvBAAABnJPAABwKBAAAAosDANyUwAAcG8FAAAGKgNvBAAABnJnAABwKBAAAAos
+DANyawAAcG8FAAAGKgNvBAAABnKDAABwKBAAAAotEgNvBAAABnKHAABwKBAAAAosCwNyiwAAcG8F
+AAAGKh4CKAoAAAYqKgIDBAUoEQAACipSAnsSAAAKAnsTAAAKFpRvFAAACiomAhYDKBUAAAoqIgIW
+KBYAAAoqWgMsCAIWKBcAAAoqcqcAAHBzGAAACnoeAigZAAAKKh4CKBoAAAoqfgIoGwAACgICcw4A
+AAZ9AQAABAICcw8AAAZ9AgAABCqSBHJEAQBwGm8cAAAKLBUCBQIDKB0AAAoOBHMDAAAGbwwAAAYq
+SisHAgNvDQAABgNvCAAABi3xKgYqOgIoHgAACgIDfQMAAAQqOgIoHgAACgIDfQQAAAQqHgIoHgAA
+CiqufgUAAAQtHnJUAQBw0AcAAAIoHwAACm8gAAAKcyEAAAqABQAABH4FAAAEKhp+BgAABCoeAoAG
+AAAEKhp+BwAABCoeAigiAAAKKi5zFQAABoAHAAAEKgAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAz
+MTkAAAAABQBsAAAAOAUAACN+AACkBQAAGAYAACNTdHJpbmdzAAAAALwLAADIAQAAI1VTAIQNAAAQ
+AAAAI0dVSUQAAACUDQAAqAEAACNCbG9iAAAAAAAAAAIAAAFXFaABCQEAAAD6ATMAFgAAAQAAAB8A
+AAAIAAAABwAAABYAAAAPAAAAIgAAABAAAAADAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAOYCAQAA
+AAAABgD0AUMEBgCIAkMEBgBAATAEDwC3BAAABgBtAYUDBgDXAYUDBgC4AYUDBgBvAoUDBgAUAoUD
+BgAtAoUDBgCEAYUDBgCfAawCCgBIAo0ACgACBI0ADgDzA40ACgDOA40ACgB9BY0ABgBABT0DBgAj
+ATAEBgATBGMEBgDCA3ADEgDzANACEgBUAdACEgDbAFsDBgAIAUMEBgDJAj0DBgCXAz0DBgCxAz0D
+BgCuAD0DBgBfAD0DBgACBoUDAAAAACUAAAAAAAEAAQABABAAUAMAABAAAQABAAEAEADmAwAAOQAB
+AAMAAQAQAF8FAABFAAEACgABABAANAUAAEkAAwAOAAEAEAD1BAAASQAEAA8AAAAQAGoExgRJAAUA
+EAAAARAAJAXGBGEABwAUAAYANAV5AAYA9QR9AAEAbQWBAAEAbQWBABEARAOFABEAywCJABEATwCN
+AFAgAAAAAMYA3wWRAAEAIiEAAAAAhhgjBAYAAgAqIQAAAACGGCMEIQACADUhAAAAAIYINgCXAAUA
+SiEAAAAAhgg+ABAABQBUIQAAAACGCA4DQwAGAF0hAAAAAIYIHQObAAYAdCEAAAAAhgD2BUMABwB8
+IQAAAACGAEcFQwAHAIQhAAAAAIYYIwQGAAcApCEAAAAAxgDSBaAABwDJIQAAAADGAcsFkQALANwh
+AAAAAMYB3wWRAAwA3iEAAAAAhhgjBKoADQDtIQAAAACGGCMEqgAOAPwhAAAAAIMYIwQGAA8ABCIA
+AAAAkwgPBLAADwAwIgAAAACTCLMAtQAPADciAAAAAJMIvwC6AA8APyIAAAAAlghTBcAAEABGIgAA
+AACGGCMEBgAQAE4iAAAAAJEYKQTFABAAAAABAPoFAAABAAgEAAACAP8EAAADANwDAAABAKYCAAAB
+AKYCAAABAC4AAAACAIMAAAADAAgEAAAEANwDAAABAAgEAAABAPoFAAABAIMFAAABAIMFAAABAKYC
+CQAjBAEAEQAjBAYAGQAjBAoAKQAjBBAAMQAjBBAAOQAjBBAAQQAjBBAASQAjBBAAUQAjBBAAWQAj
+BBAAYQAjBBAAaQAjBAYAmQAjBAYAuQAjBBUAyQAjBAYA0QALBhsAcQAjBCEAcQAIBCsAcQD/BC8A
+eQDGAjMAcQA0AzgAcQAlAz4AcQAsAwEA2QAjBBAAcQD2BUMAcQBHBUMAiQAjBAYA0QAtBUcAiQAT
+BU4AkQAjBAYA6QBxAFQA6QD+BVsAoQAjBGAAwQAjBAYALgALAOAALgATAOkALgAbAAgBLgAjABEB
+LgArADoBLgAzADoBLgA7ADoBLgBDABEBLgBLAEABLgBTADoBLgBbAFcBQwBjAKEBaQBzAAgBiQBz
+AAgB4QB7AKEB4wBrAKEBAwABAAcAAwAIAAUAAABCAMkAAAAhA80AAAATBNEAAADTANYAAABXBdsA
+AgAEAAMAAQAFAAMAAgAGAAUAAQAHAAUAAgARAAcAAgASAAkAAQATAAkAAgAUAAsABIAAAAEAAAAA
+AAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAGcARgAAAAAADwAAAAAAAAAAAAAAcACNBQAAAAAPAAAA
+AAAAAAAAAABwAKoFAAAAAAQAAAAAAAAAAAAAAGcAPQMAAAAAAAAAAAEAAAB0BAAAAAAAAABTQ180
+NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMAA8TW9kdWxlPgBJbnB1dElEAGdldF9EU1QA
+c2V0X0RTVABtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlw
+ZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5
+cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0
+dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRl
+AERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JC
+cm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFy
+a0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9u
+QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0
+aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRB
+dHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlD
+b21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAHZhbHVlAFN5c3Rl
+bS5SdW50aW1lLlZlcnNpb25pbmcAR2V0U3RyaW5nAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ180
+NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMC5kbGwAZ2V0X0RTVF9Jc051bGwAc2V0X0RT
+VF9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBT
+eXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlv
+bgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8A
+T3V0cHV0TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlw
+dEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3Rp
+Y3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzQ2
+NzEwY2JlNzA5MjQ5NWM4YWQ2NzljNThhMGNjODMwLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291
+cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ180NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMC5Q
+cm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMA
+U2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVs
+dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0
+LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1
+dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1i
+bHkAb3BfRXF1YWxpdHkAAAADRQAADUUAdQByAG8AcABlAAADQQAAF1UAUwAgAC8AIABDAGEAbgBh
+AGQAYQAAA1MAABtTAG8AdQB0AGgAIABBAG0AZQByAGkAYwBhAAADTwAAE0EAdQBzAHQAcgBhAGwA
+aQBhAAADWgAAF04AZQB3ACAAWgBlAGEAbABhAG4AZAAAA04AAANVAAAbVQBuAGsAbgBvAHcAbgAg
+AHYAYQBsAHUAZQAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0
+ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYA
+YQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9J
+AG4AcAB1AHQAIAAwAABxUwBDAF8ANAA2ADcAMQAwAGMAYgBlADcAMAA5ADIANAA5ADUAYwA4AGEA
+ZAA2ADcAOQBjADUAOABhADAAYwBjADgAMwAwAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBz
+AG8AdQByAGMAZQBzAAAAALZ97SlhFPJDjipFpxnWmrQABCABAQgDIAABBSABARERBCABAQ4FIAEB
+EVkFAAICDg4JIAMBEj0dCBJBAwYSPQMGHQgEIAEOCAUgAgEIHAQgAQIIAyAAAgYgAgIOEXEFIAEd
+CAgGAAESdRF5BCAAEn0GIAIBDhJ9CLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJFAwYSUQMG
+ElUDBhIgBSABARIMAyAADgQgAQECCSAEAQgOEj0SQQUgAQESRQQAABJRBAAAElUFAAEBElUEAAAS
+IAMAAAEDKAAOAygAAgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2Vw
+dGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNDY3MTBjYmU3MDkyNDk1YzhhZDY3OWM1OGEwY2M4
+MzAAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lv
+bj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcEAQAAAAAA
+tAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nvcmxp
+YiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1
+YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAA
+AABQQURQQURQtAAAAHgyAAAAAAAAAAAAAJIyAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEMgAA
+AAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwA0ADYANwAxADAAYwBiAGUANwAwADkAMgA0ADkANQBjADgAYQBkADYANwA5AGMANQA4
+AGEAMABjAGMAOAAzADAAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADQANgA3ADEAMABj
+AGIAZQA3ADAAOQAyADQAOQA1AGMAOABhAGQANgA3ADkAYwA1ADgAYQAwAGMAYwA4ADMAMAAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANAA2
+ADcAMQAwAGMAYgBlADcAMAA5ADIANAA5ADUAYwA4AGEAZAA2ADcAOQBjADUAOABhADAAYwBjADgA
+MwAwAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADQANgA3
+ADEAMABjAGIAZQA3ADAAOQAyADQAOQA1AGMAOABhAGQANgA3ADkAYwA1ADgAYQAwAGMAYwA4ADMA
+MAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAApDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_46710cbe7092495c8ad679c58a0cc830</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">A3</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0].Columns[DST]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DST"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DST]"
+                      name="DST"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
+              endId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task - cleaning Dim Ariport"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a70ce7af-97a0-4f8f-89dd-59473a75b1b3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task - cleaning Dim Ariport"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7BCA1A64-5492-4D61-B364-22248156F720}"
+          SQLTask:SqlStatementSource="truncate table dbo.AirportSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8D99647C-FEB9-47CB-B745-C3E616D435DF}"
+      DTS:From="Package\Execute SQL Task - cleaning Dim Ariport"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task - upload data to Dim Airport" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="280,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport"
+          TopLeft="249.999990065893,188.933334834841" />
+        <NodeLayout
+          Size="267.2,41.6"
+          Id="Package\Execute SQL Task - cleaning Dim Ariport"
+          TopLeft="257.499992152055,52.1999999380112" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="390.549991108974,93.7999999380112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95.1333348968298"
+              Start="0,0"
+              End="0,87.6333348968298">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.6333348968298" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - upload data to Dim Airport">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
+          TopLeft="306.666654480829,54.6000004339218" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination"
+          TopLeft="336.666653288736,272.3333346902" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport\Script Component"
+          TopLeft="351.66665269269,146.86666621897" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Flat File Source Output]"
+          TopLeft="411.466654480829,96.2000004339218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.9999982118608,50.6666657850477"
+              Start="0,0"
+              End="20.9999982118608,43.1666657850477">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.3333328925239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.3333328925239"
+                    Point2="0,25.3333328925239"
+                    Point3="4,25.3333328925239" />
+                  <mssgle:LineSegment
+                    End="16.9999982118608,25.3333328925239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.9999982118608,25.3333328925239"
+                    Point2="20.9999982118608,25.3333328925239"
+                    Point3="20.9999982118608,29.3333328925239" />
+                  <mssgle:LineSegment
+                    End="20.9999982118608,43.1666657850477" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
+          TopLeft="432.46665269269,188.46666621897">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.1999994039537,83.8666684712303"
+              Start="0,0"
+              End="-10.1999994039537,76.3666684712303">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.9333342356152" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.9333342356152"
+                    Point2="0,41.9333342356152"
+                    Point3="-4,41.9333342356152" />
+                  <mssgle:LineSegment
+                    End="-6.19999940395371,41.9333342356152" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.19999940395371,41.9333342356152"
+                    Point2="-10.1999994039537,41.9333342356152"
+                    Point3="-10.1999994039537,45.9333342356152" />
+                  <mssgle:LineSegment
+                    End="-10.1999994039537,76.3666684712303" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
