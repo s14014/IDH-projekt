@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{00F3C465-5E39-4E39-BBDA-7C38B432B1CA}">
+  DTS:VersionBuild="79"
+  DTS:VersionGUID="{DB51EDA2-6AAB-4A6C-BFA7-6BF4FED5F9F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -637,11 +637,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination"
+              refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="OLE DB Destination - upload AirportSt"
               usesDispositions="true"
               version="4">
               <properties>
@@ -694,7 +694,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[KASPISEK.idh_project]"
                   connectionManagerRefId="Package.ConnectionManagers[KASPISEK.idh_project]"
                   description="The OLE DB runtime connection used to access the database."
@@ -702,193 +702,193 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="72"
                       cachedName="Name"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[name]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[City]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[City]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="33"
                       cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Country]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="32"
                       cachedName="Country"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Country]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IATA]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[IATA]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="3"
                       cachedName="IATA"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[IATA]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ICAO]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[ICAO]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="ICAO"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[ICAO]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="Latitude"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="21"
                       cachedName="Longitude"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Longitude]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Altitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Altitude]"
                       cachedDataType="i2"
                       cachedName="Altitude"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Altitude]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Timezone]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Timezone]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="5"
                       cachedName="Timezone"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Timezone]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DST]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[DST]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="DST"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DST]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Type]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Type]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="7"
                       cachedName="Type"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[type]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Type]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Source]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[Source]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="Source"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[source]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[Source]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DatabseTimezone]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[DatabseTimezone]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="DatabseTimezone"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[DatabseTimezone]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AirportID]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].Columns[AirportID]"
                       cachedDataType="i2"
                       cachedName="AirportID"
-                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[AirportID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[name]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[iata]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="iata" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[icao]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="icao" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
                       dataType="r8"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
                       dataType="r8"
                       name="longitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[altitude]"
                       dataType="i4"
                       name="altitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[timezone]"
                       dataType="r8"
                       name="timezone" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[dst]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="dst" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[tz_database_timezone]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="tz_database_timezone" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[type]"
                       codePage="65001"
                       dataType="str"
                       length="255"
                       name="type" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input].ExternalColumns[source]"
                       codePage="65001"
                       dataType="str"
                       length="255"
@@ -898,22 +898,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -922,11 +922,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task - upload data to Dim Airport\Script Component"
+              refId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Script Component"
+              name="Script Component - encode DST values"
               version="12">
               <properties>
                 <property
@@ -1231,7 +1231,7 @@ public class ScriptMain : UserComponent
             Row.DST= "Europe";
         }else if (Row.DST == "A")
         {
-            Row.DST = "US / Canada";
+            Row.DST = "US/Canada";
         }else if (Row.DST == "S")
         {
             Row.DST = "South America";
@@ -1432,7 +1432,7 @@ namespace SC_46710cbe7092495c8ad679c58a0cc830.Properties {
     <msb:CodeName>SC_46710cbe7092495c8ad679c58a0cc830</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_46710cbe7092495c8ad679c58a0cc830</msb:DisplayName>
-    <msb:ProjectId>{B0FC9429-64E2-4F96-BB69-261BC4C0FED3}</msb:ProjectId>
+    <msb:ProjectId>{5051B140-5601-409F-AE87-E6AA2C74419E}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_46710cbe7092495c8ad679c58a0cc830.csproj" />
@@ -1599,26 +1599,26 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAK8Qz2EAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAnjIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-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
+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
-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
+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
-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
+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
-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
+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
-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
+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
-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
+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
-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
+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
@@ -1669,27 +1669,27 @@ U2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVs
 dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0
 LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1
 dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1i
-bHkAb3BfRXF1YWxpdHkAAAADRQAADUUAdQByAG8AcABlAAADQQAAF1UAUwAgAC8AIABDAGEAbgBh
-AGQAYQAAA1MAABtTAG8AdQB0AGgAIABBAG0AZQByAGkAYwBhAAADTwAAE0EAdQBzAHQAcgBhAGwA
-aQBhAAADWgAAF04AZQB3ACAAWgBlAGEAbABhAG4AZAAAA04AAANVAAAbVQBuAGsAbgBvAHcAbgAg
-AHYAYQBsAHUAZQAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0
-ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYA
-YQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9J
-AG4AcAB1AHQAIAAwAABxUwBDAF8ANAA2ADcAMQAwAGMAYgBlADcAMAA5ADIANAA5ADUAYwA4AGEA
-ZAA2ADcAOQBjADUAOABhADAAYwBjADgAMwAwAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBz
-AG8AdQByAGMAZQBzAAAAALZ97SlhFPJDjipFpxnWmrQABCABAQgDIAABBSABARERBCABAQ4FIAEB
-EVkFAAICDg4JIAMBEj0dCBJBAwYSPQMGHQgEIAEOCAUgAgEIHAQgAQIIAyAAAgYgAgIOEXEFIAEd
-CAgGAAESdRF5BCAAEn0GIAIBDhJ9CLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJFAwYSUQMG
-ElUDBhIgBSABARIMAyAADgQgAQECCSAEAQgOEj0SQQUgAQESRQQAABJRBAAAElUFAAEBElUEAAAS
-IAMAAAEDKAAOAygAAgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2Vw
-dGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNDY3MTBjYmU3MDkyNDk1YzhhZDY3OWM1OGEwY2M4
-MzAAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lv
-bj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcEAQAAAAAA
-tAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nvcmxp
-YiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1
-YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAA
-AABQQURQQURQtAAAAHgyAAAAAAAAAAAAAJIyAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEMgAA
-AAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAA
+bHkAb3BfRXF1YWxpdHkAAAADRQAADUUAdQByAG8AcABlAAADQQAAE1UAUwAvAEMAYQBuAGEAZABh
+AAADUwAAG1MAbwB1AHQAaAAgAEEAbQBlAHIAaQBjAGEAAANPAAATQQB1AHMAdAByAGEAbABpAGEA
+AANaAAAXTgBlAHcAIABaAGUAYQBsAGEAbgBkAAADTgAAA1UAABtVAG4AawBuAG8AdwBuACAAdgBh
+AGwAdQBlAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABi
+AGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwA
+dQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBw
+AHUAdAAgADAAAHFTAEMAXwA0ADYANwAxADAAYwBiAGUANwAwADkAMgA0ADkANQBjADgAYQBkADYA
+NwA5AGMANQA4AGEAMABjAGMAOAAzADAALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1
+AHIAYwBlAHMAAAAA/HyhS1K070GpCkA/MOde7AAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUA
+AgIODgkgAwESPR0IEkEDBhI9AwYdCAQgAQ4IBSACAQgcBCABAggDIAACBiACAg4RcQUgAR0ICAYA
+ARJ1EXkEIAASfQYgAgEOEn0It3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMG
+EiAFIAEBEgwDIAAOBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAA
+AQMoAA4DKAACBAgAElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9u
+VGhyb3dzAQgBAAIAAAAAACgBACNTQ180NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMAAA
+BQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0
+LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAAAC0AAAA
+zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBW
+ZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYx
+OTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBB
+RFBBRFC0AAAAdDIAAAAAAAAAAAAAjjIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAyAAAAAAAA
+AAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1722,7 +1722,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAApDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAoDIAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1774,12 +1774,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]"
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0].Columns[DST]"
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Inputs[Input 0].Columns[DST]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="20"
@@ -1793,9 +1793,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Outputs[Output 0]"
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]">
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Inputs[Input 0]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1804,14 +1804,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Inputs[Input 0]"
+              endId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Inputs[Input 0]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
-              endId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Data Flow Task - upload data to Dim Airport\Script Component.Outputs[Output 0]" />
+              startId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1895,43 +1895,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="255.2,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt"
+          TopLeft="289.999988476436,257.600001239777" />
+        <NodeLayout
           Size="209.6,41.6"
           Id="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
-          TopLeft="306.666654480829,54.6000004339218" />
+          TopLeft="318.333320683904,53.7333337603675" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination"
-          TopLeft="336.666653288736,272.3333346902" />
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task - upload data to Dim Airport\Script Component"
-          TopLeft="351.66665269269,146.86666621897" />
+          Size="260.8,41.6"
+          Id="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values"
+          TopLeft="289.166655176217,153.799999607405" />
         <EdgeLayout
           Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Flat File Source Output]"
-          TopLeft="411.466654480829,96.2000004339218">
+          TopLeft="421.34998793006,95.3333337603675">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.9999982118608,50.6666657850477"
+              EndConnector="0,58.4666658470375"
               Start="0,0"
-              End="20.9999982118608,43.1666657850477">
+              End="0,50.9666658470375">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.3333328925239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.3333328925239"
-                    Point2="0,25.3333328925239"
-                    Point3="4,25.3333328925239" />
-                  <mssgle:LineSegment
-                    End="16.9999982118608,25.3333328925239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.9999982118608,25.3333328925239"
-                    Point2="20.9999982118608,25.3333328925239"
-                    Point3="20.9999982118608,29.3333328925239" />
-                  <mssgle:LineSegment
-                    End="20.9999982118608,43.1666657850477" />
+                    End="0,50.9666658470375" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1942,30 +1930,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
-          TopLeft="432.46665269269,188.46666621897">
+          TopLeft="418.583321826326,195.399999607405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10.1999994039537,83.8666684712303"
+              EndConnector="0,62.200001632372"
               Start="0,0"
-              End="-10.1999994039537,76.3666684712303">
+              End="0,54.700001632372">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.9333342356152" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.9333342356152"
-                    Point2="0,41.9333342356152"
-                    Point3="-4,41.9333342356152" />
-                  <mssgle:LineSegment
-                    End="-6.19999940395371,41.9333342356152" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.19999940395371,41.9333342356152"
-                    Point2="-10.1999994039537,41.9333342356152"
-                    Point3="-10.1999994039537,45.9333342356152" />
-                  <mssgle:LineSegment
-                    End="-10.1999994039537,76.3666684712303" />
+                    End="0,54.700001632372" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1978,7 +1954,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination">
+    design-time-name="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
