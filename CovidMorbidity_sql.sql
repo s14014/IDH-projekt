@@ -5,8 +5,8 @@ CREATE TABLE CovidMorbiditySt(
 	Country_code varchar(2) NOT NULL,
 	Country varchar(100) NOT NULL,
 	WHO_region varchar(100) NOT NULL,
-	New_cases bigint NOT NULL,
-	Cumulative_cases bigint NOT NULL,
-	New_deaths bigint NOT NULL,
-	Cumulative_deaths bigint NOT NULL,
+	New_cases int,
+	Cumulative_cases int,
+	New_deaths int,
+	Cumulative_deaths int,
 );
