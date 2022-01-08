@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName />
+        <PathOnServer />
         <StartObjectID>Airport.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
