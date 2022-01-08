@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{4D0269B3-1B77-41FC-8AF1-656A3291A207}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{CE47FEE3-4163-48A2-8CBE-2C8CBFA582D3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -95,33 +95,21 @@
         <NodeLayout
           Size="260,41.6"
           Id="Package\Execute SQL Task - cleaning Dim Time"
-          TopLeft="156.666660441293,43.5333328718609" />
+          TopLeft="224.166657759084,37.4666661569808" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="286.666660441293,85.1333328718609">
+          TopLeft="355.999991456668,79.0666661569807">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71.1666647129589,102.066668615871"
+              EndConnector="0,108.133335330751"
               Start="0,0"
-              End="71.1666647129589,94.5666686158711">
+              End="0,100.633335330751">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.0333343079355" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.0333343079355"
-                    Point2="0,51.0333343079355"
-                    Point3="4,51.0333343079355" />
-                  <mssgle:LineSegment
-                    End="67.1666647129589,51.0333343079355" />
-                  <mssgle:CubicBezierSegment
-                    Point1="67.1666647129589,51.0333343079355"
-                    Point2="71.1666647129589,51.0333343079355"
-                    Point3="71.1666647129589,55.0333343079355" />
-                  <mssgle:LineSegment
-                    End="71.1666647129589,94.5666686158711" />
+                    End="0,100.633335330751" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
