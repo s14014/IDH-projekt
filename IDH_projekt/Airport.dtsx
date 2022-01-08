@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{2D16E9CF-DABA-4EF8-94BA-C3E2790DC79F}">
+  DTS:VersionBuild="79"
+  DTS:VersionGUID="{DB51EDA2-6AAB-4A6C-BFA7-6BF4FED5F9F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1897,7 +1897,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="255.2,41.6"
           Id="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt"
-          TopLeft="300.833321379291,274.066668037309" />
+          TopLeft="289.999988476436,257.600001239777" />
         <NodeLayout
           Size="209.6,41.6"
           Id="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
@@ -1912,14 +1912,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.466665847037"
+              EndConnector="0,58.4666658470375"
               Start="0,0"
-              End="0,50.966665847037">
+              End="0,50.9666658470375">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.966665847037" />
+                    End="0,50.9666658470375" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1930,30 +1930,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
-          TopLeft="419.566655176217,195.399999607405">
+          TopLeft="418.583321826326,195.399999607405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.8666662030746,78.6666684299041"
+              EndConnector="0,62.200001632372"
               Start="0,0"
-              End="8.8666662030746,71.1666684299041">
+              End="0,54.700001632372">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.333334214952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.333334214952"
-                    Point2="0,39.333334214952"
-                    Point3="4,39.333334214952" />
-                  <mssgle:LineSegment
-                    End="4.8666662030746,39.333334214952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.8666662030746,39.333334214952"
-                    Point2="8.8666662030746,39.333334214952"
-                    Point3="8.8666662030746,43.333334214952" />
-                  <mssgle:LineSegment
-                    End="8.8666662030746,71.1666684299041" />
+                    End="0,54.700001632372" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

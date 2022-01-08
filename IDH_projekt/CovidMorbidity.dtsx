@@ -1,0 +1,1648 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/2/2022 2:11:55 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KASPISEK"
+  DTS:CreatorName="KASPISEK\Tobiasz Gąska"
+  DTS:DTSID="{8BDABE1F-B463-4AFD-B538-CECC23A9D555}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{4EBFDE37-151B-4969-A85D-BB056231BE9B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[covid_data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C464522D-D440-4BE3-989A-6E6BCEAA999D}"
+      DTS:ObjectName="covid_data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Tobiasz Gąska\Documents\PJWSTK\idh_project\covid_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date_reported"
+              DTS:DTSID="{E29C34C5-68D6-4AA6-A896-8C6531E25D25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country_code"
+              DTS:DTSID="{14C5BED0-136A-48B0-B51C-1DCACF628DE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="46"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{327B9410-CE13-4CD7-B4B7-D3088923A146}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WHO_region"
+              DTS:DTSID="{C1471B76-FAB1-4CE6-B7E6-A0EFEC0D50F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New_cases"
+              DTS:DTSID="{46AC9B1C-62DB-4080-9DA1-D5AFE01FDA5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cumulative_cases"
+              DTS:DTSID="{06C5E9A7-16D5-44C1-A034-B25BA31AC7F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New_deaths"
+              DTS:DTSID="{7A1BD1A8-6427-48FF-810B-663B14A5FD14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cumulative_deaths"
+              DTS:DTSID="{71D5DAEA-885E-45F9-AFF9-963FEDEF9E2B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[KASPISEK.idh_project]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{431405D9-92DB-4BD2-9717-73D242BDFCF6}"
+      DTS:ObjectName="KASPISEK.idh_project">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=KASPISEK;Initial Catalog=idh_project;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - upload data to Dim CovidMorbidity"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{288C7475-A241-4F7C-8558-29E02F80782A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - upload data to Dim CovidMorbidity"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source - covid_data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[covid_data]"
+                  connectionManagerRefId="Package.ConnectionManagers[covid_data]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Date_reported]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Date_reported]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Date_reported]"
+                      name="Date_reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country_code]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Country_code]"
+                      length="2"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country_code]"
+                      name="Country_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="46"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[WHO_region]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[WHO_region]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[WHO_region]"
+                      name="WHO_region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_cases]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Cumulative_cases]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_cases]"
+                      name="Cumulative_cases"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_deaths]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[New_deaths]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_deaths]"
+                      name="New_deaths"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_deaths]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Cumulative_deaths]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_deaths]"
+                      name="Cumulative_deaths"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_cases]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[New_cases]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_cases]"
+                      name="New_cases"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Date_reported]"
+                      dataType="date"
+                      name="Date_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Country_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="2"
+                      name="Country_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="46"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[WHO_region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="WHO_region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[New_cases]"
+                      dataType="i4"
+                      name="New_cases" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Cumulative_cases]"
+                      dataType="i4"
+                      name="Cumulative_cases" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[New_deaths]"
+                      dataType="i4"
+                      name="New_deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].ExternalColumns[Cumulative_deaths]"
+                      dataType="i4"
+                      name="Cumulative_deaths" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - upload CovidMorbiditySt"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CovidMorbiditySt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">65001</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[KASPISEK.idh_project]"
+                  connectionManagerRefId="Package.ConnectionManagers[KASPISEK.idh_project]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[Date_reported]"
+                      cachedDataType="date"
+                      cachedName="Date_reported"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Date_reported]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Date_reported]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[Country_code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="Country_code"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Country_code]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="46"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[WHO_region]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WHO_region"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[WHO_region]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[WHO_region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[Cumulative_cases]"
+                      cachedDataType="i4"
+                      cachedName="Cumulative_cases"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_cases]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_cases]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[New_deaths]"
+                      cachedDataType="i4"
+                      cachedName="New_deaths"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_deaths]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_deaths]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[Cumulative_deaths]"
+                      cachedDataType="i4"
+                      cachedName="Cumulative_deaths"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_deaths]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[Cumulative_deaths]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].Columns[New_cases]"
+                      cachedDataType="i4"
+                      cachedName="New_cases"
+                      externalMetadataColumnId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_cases]"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[New_cases]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Date_reported]"
+                      dataType="dbDate"
+                      name="Date_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Country_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="2"
+                      name="Country_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="100"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[WHO_region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="100"
+                      name="WHO_region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_cases]"
+                      dataType="i4"
+                      name="New_cases" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_cases]"
+                      dataType="i4"
+                      name="Cumulative_cases" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_deaths]"
+                      dataType="i4"
+                      name="New_deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_deaths]"
+                      dataType="i4"
+                      name="Cumulative_deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component - encode DST values"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        if (Row.WHOregion == "AFRO")
+        {
+            Row.WHOregion= "Regional Office for Africa";
+        }else if (Row.WHOregion == "AMRO")
+        {
+            Row.WHOregion = "Regional Office for the Americas";
+        }else if (Row.WHOregion == "SEARO")
+        {
+            Row.WHOregion = "Regional Office for South - East Asia";
+        }else if (Row.WHOregion == "EURO")
+        {
+            Row.WHOregion = "Regional Office for Europe";
+        }else if (Row.WHOregion == "EMRO")
+        {
+            Row.WHOregion = "Regional Office for the Eastern Mediterranean";
+        }else if (Row.WHOregion == "WPRO")
+        {
+            Row.WHOregion = "Regional Office for the Western Pacific";
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String WHOregion
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool WHOregion_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Settings.get_Default():SC_46710cbe7092495c8ad679c58a0cc830.Properties.Sett" +
+    "ings")]
+
+namespace SC_46710cbe7092495c8ad679c58a0cc830.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_46710cbe7092495c8ad679c58a0cc830.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_46710cbe7092495c8ad679c58a0cc830.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_46710cbe7092495c8ad679c58a0cc830</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_46710cbe7092495c8ad679c58a0cc830</msb:DisplayName>
+    <msb:ProjectId>{DA5CB42E-CB13-442A-B06A-3B008E1EDECA}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_46710cbe7092495c8ad679c58a0cc830.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_46710cbe7092495c8ad679c58a0cc830")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_46710cbe7092495c8ad679c58a0cc830")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_46710cbe7092495c8ad679c58a0cc830.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCF6CB85-616C-449E-AF85-15F5F25A0A08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_46710cbe7092495c8ad679c58a0cc830</RootNamespace>
+    <AssemblyName>SC_D0938F178F4F4561B2F4BD5CD1D263FF</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_D0938F178F4F4561B2F4BD5CD1D263FF.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGdG02EAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA4jMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAJAzAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA6BMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADE
+MwAAAAAAAEgAAAACAAUASCIAAJAQAAABAAAAAAAAANgyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAgC0AAAAAAAAAANvBAAABnIBAABwKBAAAAosDANyCwAA
+cG8FAAAGKgNvBAAABnJBAABwKBAAAAosDANySwAAcG8FAAAGKgNvBAAABnKNAABwKBAAAAosDANy
+mQAAcG8FAAAGKgNvBAAABnLlAABwKBAAAAosDANy7wAAcG8FAAAGKgNvBAAABnIlAQBwKBAAAAos
+DANyLwEAcG8FAAAGKgNvBAAABnKLAQBwKBAAAAosCwNylQEAcG8FAAAGKh4CKAoAAAYqKgIDBAUo
+EQAACipSAnsSAAAKAnsTAAAKFpRvFAAACiomAhYDKBUAAAoqIgIWKBYAAAoqWgMsCAIWKBcAAAoq
+cuUBAHBzGAAACnoeAigZAAAKKh4CKBoAAAoqfgIoGwAACgICcw4AAAZ9AQAABAICcw8AAAZ9AgAA
+BCqSBHKCAgBwGm8cAAAKLBUCBQIDKB0AAAoOBHMDAAAGbwwAAAYqSisHAgNvDQAABgNvCAAABi3x
+KgYqOgIoHgAACgIDfQMAAAQqOgIoHgAACgIDfQQAAAQqHgIoHgAACiqufgUAAAQtHnKSAgBw0AcA
+AAIoHwAACm8gAAAKcyEAAAqABQAABH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+BwAABCoeAigiAAAK
+Ki5zFQAABoAHAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAADgFAAAjfgAA
+pAUAADAGAAAjU3RyaW5ncwAAAADUCwAABAMAACNVUwDYDgAAEAAAACNHVUlEAAAA6A4AAKgBAAAj
+QmxvYgAAAAAAAAACAAABVxWgAQkBAAAA+gEzABYAAAEAAAAfAAAACAAAAAcAAAAWAAAADwAAACIA
+AAAQAAAAAwAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAADWAgEAAAAAAAYA5AFbBAYAeAJbBAYAMAFI
+BA8AzwQAAAYAXQGdAwYAxwGdAwYAqAGdAwYAXwKdAwYABAKdAwYAHQKdAwYAdAGdAwYAjwGcAgoA
+OAJ9AAoAGgR9AA4ACwR9AAoA5gN9AAoAlQV9AAYAWAU5AwYAEwFIBAYAKwR7BAYA2gOIAxIA4wDA
+AhIARAHAAhIAywBzAwYA+ABbBAYAuQI5AwYArwM5AwYAyQM5AwYAngA5AwYATwA5AwYAGgadAwAA
+AAABAAAAAAABAAEAAQAQAEwDAAAQAAEAAQABABAA/gMAADkAAQADAAEAEAB3BQAARQABAAoAAQAQ
+AEwFAABJAAMADgABABAADQUAAEkABAAPAAAAEACCBN4ESQAFABAAAAEQADwF3gRhAAcAFAAGAEwF
+eQAGAA0FfQABAIUFgQABAIUFgQARAEADhQARALsAiQARAD8AjQBQIAAAAADGAPcFkQABABAhAAAA
+AIYYOwQGAAIAGCEAAAAAhhg7BCEAAgAjIQAAAACGCFcDlwAFADghAAAAAIYIZQMQAAUAQiEAAAAA
+hgj+AkMABgBLIQAAAACGCBMDmwAGAGIhAAAAAIYADgZDAAcAaiEAAAAAhgBfBUMABwByIQAAAACG
+GDsEBgAHAJIhAAAAAMYA6gWgAAcAtyEAAAAAxgHjBZEACwDKIQAAAADGAfcFkQAMAMwhAAAAAIYY
+OwSqAA0A2yEAAAAAhhg7BKoADgDqIQAAAACDGDsEBgAPAPIhAAAAAJMIJwSwAA8AHiIAAAAAkwij
+ALUADwAlIgAAAACTCK8AugAPAC0iAAAAAJYIawXAABAANCIAAAAAhhg7BAYAEAA8IgAAAACRGEEE
+xQAQAAAAAQASBgAAAQAgBAAAAgAXBQAAAwD0AwAAAQCWAgAAAQCWAgAAAQAKAAAAAgBzAAAAAwAg
+BAAABAD0AwAAAQAgBAAAAQASBgAAAQCbBQAAAQCbBQAAAQCWAgkAOwQBABEAOwQGABkAOwQKACkA
+OwQQADEAOwQQADkAOwQQAEEAOwQQAEkAOwQQAFEAOwQQAFkAOwQQAGEAOwQQAGkAOwQGAJkAOwQG
+ALkAOwQVAMkAOwQGANEAIwYbAHEAOwQhAHEAIAQrAHEAFwUvAHkAtgIzAHEAMAM4AHEAIQM+AHEA
+KAMBANkAOwQQAHEADgZDAHEAXwVDAIkAOwQGANEARQVHAIkAKwVOAJEAOwQGAOkAYQBUAOkAFgZb
+AKEAOwRgAMEAOwQGAC4ACwDgAC4AEwDpAC4AGwAIAS4AIwARAS4AKwA6AS4AMwA6AS4AOwA6AS4A
+QwARAS4ASwBAAS4AUwA6AS4AWwBXAUMAYwChAWkAcwAIAYkAcwAIAeEAewChAeMAawChAQMAAQAH
+AAMACAAFAAAAaQPJAAAAFwPNAAAAKwTRAAAAwwDWAAAAbwXbAAIABAADAAEABQADAAIABgAFAAEA
+BwAFAAIAEQAHAAIAEgAJAAEAEwAJAAIAFAALAASAAAABAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAA
+AAAAAABnADYAAAAAAA8AAAAAAAAAAAAAAHAApQUAAAAADwAAAAAAAAAAAAAAcADCBQAAAAAEAAAA
+AAAAAAAAAABnADkDAAAAAAAAAAABAAAAjAQAAAAAAAAAPE1vZHVsZT4ASW5wdXRJRABTQ19EMDkz
+OEYxNzhGNEY0NTYxQjJGNEJENUNEMUQyNjNGRgBtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAUnVu
+dGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VD
+dWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBp
+bGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdn
+YWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJp
+YnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUA
+QXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1
+dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1
+dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9p
+bnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5
+QXR0cmlidXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAR2V0U3RyaW5nAFN5c3Rl
+bS5Db21wb25lbnRNb2RlbABTQ19EMDkzOEYxNzhGNEY0NTYxQjJGNEJENUNEMUQyNjNGRi5kbGwA
+Z2V0X1dIT3JlZ2lvbl9Jc051bGwAc2V0X1dIT3JlZ2lvbl9Jc051bGwAU2V0TnVsbABzZXRfSXRl
+bQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBnZXRfV0hPcmVnaW9uAHNldF9XSE9yZWdp
+b24AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxl
+Y3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJ
+bmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBT
+Y3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdu
+b3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBT
+Q180NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMC5Qcm9wZXJ0aWVzLlJlc291cmNlcy5y
+ZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNDY3MTBjYmU3MDkyNDk1YzhhZDY3OWM1OGEwY2M4
+MzAuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRl
+eGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0Rl
+ZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jv
+c29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QA
+SW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fz
+c2VtYmx5AG9wX0VxdWFsaXR5AAAACUEARgBSAE8AADVSAGUAZwBpAG8AbgBhAGwAIABPAGYAZgBp
+AGMAZQAgAGYAbwByACAAQQBmAHIAaQBjAGEAAAlBAE0AUgBPAABBUgBlAGcAaQBvAG4AYQBsACAA
+TwBmAGYAaQBjAGUAIABmAG8AcgAgAHQAaABlACAAQQBtAGUAcgBpAGMAYQBzAAALUwBFAEEAUgBP
+AABLUgBlAGcAaQBvAG4AYQBsACAATwBmAGYAaQBjAGUAIABmAG8AcgAgAFMAbwB1AHQAaAAgAC0A
+IABFAGEAcwB0ACAAQQBzAGkAYQABCUUAVQBSAE8AADVSAGUAZwBpAG8AbgBhAGwAIABPAGYAZgBp
+AGMAZQAgAGYAbwByACAARQB1AHIAbwBwAGUAAAlFAE0AUgBPAABbUgBlAGcAaQBvAG4AYQBsACAA
+TwBmAGYAaQBjAGUAIABmAG8AcgAgAHQAaABlACAARQBhAHMAdABlAHIAbgAgAE0AZQBkAGkAdABl
+AHIAcgBhAG4AZQBhAG4AAAlXAFAAUgBPAABPUgBlAGcAaQBvAG4AYQBsACAATwBmAGYAaQBjAGUA
+IABmAG8AcgAgAHQAaABlACAAVwBlAHMAdABlAHIAbgAgAFAAYQBjAGkAZgBpAGMAAICbSQBzAE4A
+dQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABv
+ACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgA
+ZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBf
+ADQANgA3ADEAMABjAGIAZQA3ADAAOQAyADQAOQA1AGMAOABhAGQANgA3ADkAYwA1ADgAYQAwAGMA
+YwA4ADMAMAAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAi5W1Cbk/
+sUWuAXCfsdh9+gAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUAAgIODgkgAwESPR0IEkEDBhI9
+AwYdCAQgAQ4IBSACAQgcBCABAggDIAACBiACAg4RcQUgAR0ICAYAARJ1EXkEIAASfQYgAgEOEn0I
+t3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAOBCABAQIJ
+IAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACBAgAElEECAAS
+VQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgB
+ACNTQ180NjcxMGNiZTcwOTI0OTVjOGFkNjc5YzU4YTBjYzgzMAAABQEAAAAAFgEAEUNvcHlyaWdo
+dCBAICAyMDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rp
+c3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3Rl
+bS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1
+bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVz
+b3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAuDMAAAAAAAAA
+AAAA0jMAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMQzAAAAAAAAAAAAAAAAX0NvckRsbE1haW4A
+bXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwA0ADYANwAxADAAYwBiAGUANwAwADkAMgA0ADkANQBjADgAYQBkADYANwA5AGMANQA4
+AGEAMABjAGMAOAAzADAAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAEQAMAA5ADMAOABG
+ADEANwA4AEYANABGADQANQA2ADEAQgAyAEYANABCAEQANQBDAEQAMQBEADIANgAzAEYARgAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ARAAw
+ADkAMwA4AEYAMQA3ADgARgA0AEYANAA1ADYAMQBCADIARgA0AEIARAA1AEMARAAxAEQAMgA2ADMA
+RgBGAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADQANgA3
+ADEAMABjAGIAZQA3ADAAOQAyADQAOQA1AGMAOABhAGQANgA3ADkAYwA1ADgAYQAwAGMAYwA4ADMA
+MAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA5DMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_d0938f178f4f4561b2f4bd5cd1d263ff</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">89</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Inputs[Input 0].Columns[WHO_region]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WHO_region"
+                      lineageId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output].Columns[WHO_region]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Inputs[Input 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Inputs[Input 0]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Output 0]"
+              endId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task - cleaning Dim CovidMorbidity"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6801a3d6-d4ad-4760-82e8-31f309db6bf7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task - cleaning Dim CovidMorbidity"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{431405D9-92DB-4BD2-9717-73D242BDFCF6}"
+          SQLTask:SqlStatementSource="truncate table dbo.CovidMorbiditySt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9F3072DA-6E77-4117-979C-A3A03F7B9648}"
+      DTS:From="Package\Execute SQL Task - cleaning Dim CovidMorbidity"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task - upload data to Dim CovidMorbidity" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="318.4,41.6"
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity"
+          TopLeft="344.166652990713,153.400001219114" />
+        <NodeLayout
+          Size="305.6,41.6"
+          Id="Package\Execute SQL Task - cleaning Dim CovidMorbidity"
+          TopLeft="347.499986191592,44.3999995454155" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="501.833319591152,85.9999995454155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67.4000016736985"
+              Start="0,0"
+              End="0,59.9000016736985">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.9000016736985" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - upload data to Dim CovidMorbidity">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="260.8,41.6"
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values"
+          TopLeft="310.833320981927,148.400000371933" />
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data"
+          TopLeft="336.666653288736,52.8666670868132" />
+        <NodeLayout
+          Size="292.8,41.6"
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt"
+          TopLeft="298.333321478632,253.06666867786" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Output 0]"
+          TopLeft="442.983321230279,190.000000371933">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.0666683059269"
+              Start="0,0"
+              End="0,55.5666683059269">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5666683059269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Flat File Source Output]"
+          TopLeft="441.549987135331,94.4666670868132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.9333332851198"
+              Start="0,0"
+              End="0,46.4333332851198">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.4333332851198" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
