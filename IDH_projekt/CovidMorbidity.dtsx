@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{90F10BE7-EAE8-4406-8B89-5467545399B1}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{4EBFDE37-151B-4969-A85D-BB056231BE9B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -554,20 +554,24 @@
                       name="WHO_region" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_cases]"
-                      dataType="i8"
+                      dataType="i4"
                       name="New_cases" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_cases]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Cumulative_cases" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[New_deaths]"
-                      dataType="i8"
+                      dataType="i4"
                       name="New_deaths" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative_deaths]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Cumulative_deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt.Inputs[OLE DB Destination Input].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1569,6 +1573,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="260.8,41.6"
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values"
+          TopLeft="310.833320981927,148.400000371933" />
+        <NodeLayout
           Size="210.4,41.6"
           Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\Flat File Source - covid_data"
           TopLeft="336.666653288736,52.8666670868132" />
@@ -1576,32 +1584,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Size="292.8,41.6"
           Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\OLE DB Destination - upload CovidMorbiditySt"
           TopLeft="298.333321478632,253.06666867786" />
-        <NodeLayout
-          Size="260.8,41.6"
-          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity\Script Component - encode DST values"
-          TopLeft="310.833320981927,148.400000371933" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Flat File Source Output]"
-          TopLeft="441.549987135331,94.4666670868132">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.9333332851198"
-              Start="0,0"
-              End="0,46.4333332851198">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.4333332851198" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Output 0]"
           TopLeft="442.983321230279,190.000000371933">
@@ -1616,6 +1598,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,55.5666683059269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim CovidMorbidity.Paths[Flat File Source Output]"
+          TopLeft="441.549987135331,94.4666670868132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.9333332851198"
+              Start="0,0"
+              End="0,46.4333332851198">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.4333332851198" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
