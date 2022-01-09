@@ -5,7 +5,7 @@ DECLARE @date DATE
 DECLARE @englishMonth VARCHAR(30),  @englishDay VARCHAR(30), @season VARCHAR(30)
 SELECT @val = 0
 
-WHILE @val < 1024
+WHILE @val < 730
 BEGIN
 	SELECT @date = DATEADD(DAY, @val, '2020-01-03')
 	
