@@ -1,0 +1,37 @@
+USE [IDH]
+GO
+
+/****** Object:  Table [dbo].[Flight]    Script Date: 09.01.2022 01:46:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Flight](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Callsign] [varchar](50) NOT NULL,
+	[Number] [varchar](50) NOT NULL,
+	[AirlineICAO] [varchar](50) NOT NULL,
+	[ICAO24] [varchar](50) NOT NULL,
+	[Registration] [varchar](50) NOT NULL,
+	[TypeCode] [varchar](50) NOT NULL,
+	[Origin] [varchar](50) NOT NULL,
+	[Destination] [varchar](50) NOT NULL,
+	[FirstSeen] [datetime] NOT NULL,
+	[LastSeen] [datetime] NOT NULL,
+	[Day] [datetime] NOT NULL,
+	[Latitude_1] [float] NOT NULL,
+	[Longitude_1] [float] NOT NULL,
+	[Altitude_1] [float] NOT NULL,
+	[Latitude_2] [float] NOT NULL,
+	[Longitude_2] [float] NOT NULL,
+	[Altitude_2] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
