@@ -1,36 +1,36 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/30/2021 3:05:17 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="KASPISEK"
   DTS:CreatorName="KASPISEK\Tobiasz Gąska"
-  DTS:DTSID="{9A9D2FA6-9115-4E2B-9D9D-B7B4DD8DBB10}"
+  DTS:DTSID="{6B45029F-5B09-4DCB-BA71-BFB606080F50}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="AirportSt"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{2D16E9CF-DABA-4EF8-94BA-C3E2790DC79F}">
+  DTS:VersionBuild="77"
+  DTS:VersionGUID="{3E80B749-5EA1-4826-A3A6-A8CBC6BDCC37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[airport_dat]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{2C823A3E-8FFE-4A99-9C33-DE01ACD9C1C4}"
+      DTS:DTSID="{750ACE37-9D14-4F59-B37A-60444BE01ED7}"
       DTS:ObjectName="airport_dat">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Tobiasz Gąska\Documents\PJWSTK\idh_project\airports.dat.txt">
+          DTS:ConnectionString="C:\Users\Lenovo\Desktop\IDH_projekt\airports.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="airport_id"
-              DTS:DTSID="{68B2B242-368D-47DA-BF59-E0410CF64E0D}"
+              DTS:DTSID="{3A6B1A82-5C03-494C-9A43-6172497E9B73}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="name"
-              DTS:DTSID="{04C4FA24-BF80-4C89-90EF-304C9846AA4D}"
+              DTS:DTSID="{3B0AC992-4B63-445D-BAE9-AB3706E5D62C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{08C919A7-4AD9-4375-955F-C82B1AA96CD5}"
+              DTS:DTSID="{C1BECEED-5B0A-4CE7-8D8F-9973679CF556}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country"
-              DTS:DTSID="{98613943-FF90-4BFA-A51F-3B7344861083}"
+              DTS:DTSID="{32747938-CDC0-4B5C-A00D-78BC35AD41B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="iata"
-              DTS:DTSID="{6F037B93-DF5D-4577-9E5B-8FD8E0733745}"
+              DTS:DTSID="{D8E5CFF0-21FB-4AD6-98FE-34F994F843C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="icao"
-              DTS:DTSID="{40BF2144-A308-4A71-B786-B4C1175FE3EE}"
+              DTS:DTSID="{1D2C50C5-08BD-4A81-B77C-29D82E5AEDDB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +91,7 @@
               DTS:MaximumWidth="20"
               DTS:DataType="129"
               DTS:ObjectName="latitude"
-              DTS:DTSID="{AF31913E-A3D0-435B-A002-E9FB1CD10766}"
+              DTS:DTSID="{1CB999B9-A0C5-4A53-B09E-0484FE81B26D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
               DTS:MaximumWidth="21"
               DTS:DataType="129"
               DTS:ObjectName="longitude"
-              DTS:DTSID="{7D5734D3-BC68-49A3-902F-9D66EBCCBB36}"
+              DTS:DTSID="{7D24060D-A9B1-4409-BE15-D218D77EE486}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +107,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="altitude"
-              DTS:DTSID="{0FD6EB60-4BF7-4FD6-88DE-99B05C6CDF34}"
+              DTS:DTSID="{C9013F51-0460-48DD-A359-4D79AC6D804F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="timezone"
-              DTS:DTSID="{F3E7A8EB-CE62-472F-B064-4A075E196E51}"
+              DTS:DTSID="{660B36BA-0C5F-4105-B6C1-C85B8D8F5890}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -125,7 +125,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dst"
-              DTS:DTSID="{75A4C88A-37F8-45BC-926B-AA15258A93E0}"
+              DTS:DTSID="{F4B50DBF-FB70-4AD0-BB77-821CA0967C99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -134,7 +134,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="tz_database_timezone"
-              DTS:DTSID="{AB57FFE7-1363-45EC-BA08-4C701E94A0CB}"
+              DTS:DTSID="{E4D024D3-451B-4D53-B10C-6518A3E315B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -143,31 +143,31 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="type"
-              DTS:DTSID="{77AE1987-FC90-4CBC-8CAE-DF7669A320B1}"
+              DTS:DTSID="{09187032-1B1B-4D59-8570-395DCB802861}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000A_"
+              DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:MaximumWidth="11"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="source"
-              DTS:DTSID="{14E2265E-2869-408D-8812-F36D9CCE0996}"
+              DTS:DTSID="{DA4F999D-65CD-49DF-B283-6AA0137C5B34}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[KASPISEK.idh_project]"
+      DTS:refId="Package.ConnectionManagers[LAPTOP-JCAI2HSF\MSSQLSERVER01.IDH]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{7BCA1A64-5492-4D61-B364-22248156F720}"
-      DTS:ObjectName="KASPISEK.idh_project">
+      DTS:DTSID="{6628A109-7725-4E39-9972-9149786E5679}"
+      DTS:ObjectName="LAPTOP-JCAI2HSF\MSSQLSERVER01.IDH">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=KASPISEK;Initial Catalog=idh_project;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LAPTOP-JCAI2HSF\MSSQLSERVER01;Initial Catalog=IDH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -177,7 +177,7 @@
       DTS:refId="Package\Data Flow Task - upload data to Dim Airport"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{4517027E-2C78-449B-BDFB-BC97C5094CEA}"
+      DTS:DTSID="{35CD6A02-8FEB-4CC3-9242-F7366F2F9564}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task - upload data to Dim Airport"
@@ -187,6 +187,97 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split - city"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input].Columns[City]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="33"
+                      cachedName="City"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[empty city]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="empty city"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]} == "" || [ISNULL](#{Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output].Columns[City]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">City == "" || ISNULL(City)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[other rows]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="other rows"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
               componentClassID="Microsoft.FlatFileSource"
@@ -695,8 +786,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[KASPISEK.idh_project]"
-                  connectionManagerRefId="Package.ConnectionManagers[KASPISEK.idh_project]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JCAI2HSF\MSSQLSERVER01.IDH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JCAI2HSF\MSSQLSERVER01.IDH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1808,8 +1899,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="Flat File Source Output"
               startId="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
+              refId="Package\Data Flow Task - upload data to Dim Airport.Paths[other rows]"
               endId="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt.Inputs[OLE DB Destination Input]"
+              name="other rows"
+              startId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Outputs[other rows]" />
+            <path
+              refId="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
+              endId="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city.Inputs[Conditional Split Input]"
               name="Output 0"
               startId="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values.Outputs[Output 0]" />
           </paths>
@@ -1820,7 +1916,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:refId="Package\Execute SQL Task - cleaning Dim Ariport"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{a70ce7af-97a0-4f8f-89dd-59473a75b1b3}"
+      DTS:DTSID="{73A5DA96-1BD5-4641-A6EC-4F8783022F2E}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - cleaning Dim Ariport"
@@ -1829,7 +1925,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{7BCA1A64-5492-4D61-B364-22248156F720}"
+          SQLTask:Connection="{6628A109-7725-4E39-9972-9149786E5679}"
           SQLTask:SqlStatementSource="truncate table dbo.AirportSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1838,7 +1934,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{8D99647C-FEB9-47CB-B745-C3E616D435DF}"
+      DTS:DTSID="{93F5FE92-FE7B-4853-8C8F-1CB054E0B4E1}"
       DTS:From="Package\Execute SQL Task - cleaning Dim Ariport"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1857,11 +1953,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="280,41.6"
+          Size="280,42"
           Id="Package\Data Flow Task - upload data to Dim Airport"
           TopLeft="249.999990065893,188.933334834841" />
         <NodeLayout
-          Size="267.2,41.6"
+          Size="267,42"
           Id="Package\Execute SQL Task - cleaning Dim Ariport"
           TopLeft="257.499992152055,52.1999999380112" />
         <EdgeLayout
@@ -1893,17 +1989,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Data Flow Task - upload data to Dim Airport">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="255.2,41.6"
+          Size="255,42"
           Id="Package\Data Flow Task - upload data to Dim Airport\OLE DB Destination - upload AirportSt"
-          TopLeft="300.833321379291,274.066668037309" />
+          TopLeft="297.833321379291,341.066668037309" />
         <NodeLayout
-          Size="209.6,41.6"
+          Size="210,42"
           Id="Package\Data Flow Task - upload data to Dim Airport\Flat File Source - airport_dat"
           TopLeft="318.333320683904,53.7333337603675" />
         <NodeLayout
-          Size="260.8,41.6"
+          Size="261,42"
           Id="Package\Data Flow Task - upload data to Dim Airport\Script Component - encode DST values"
           TopLeft="289.166655176217,153.799999607405" />
         <EdgeLayout
@@ -1928,38 +2024,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Data Flow Task - upload data to Dim Airport\Conditional Split - city"
+          TopLeft="335,246" />
         <EdgeLayout
           Id="Package\Data Flow Task - upload data to Dim Airport.Paths[Output 0]"
-          TopLeft="419.566655176217,195.399999607405">
+          TopLeft="423.583327588108,195.799999607405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.8666662030746,78.6666684299041"
+              EndConnector="0,50.200000392595"
               Start="0,0"
-              End="8.8666662030746,71.1666684299041">
+              End="0,42.700000392595">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.333334214952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.333334214952"
-                    Point2="0,39.333334214952"
-                    Point3="4,39.333334214952" />
-                  <mssgle:LineSegment
-                    End="4.8666662030746,39.333334214952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.8666662030746,39.333334214952"
-                    Point2="8.8666662030746,39.333334214952"
-                    Point3="8.8666662030746,43.333334214952" />
-                  <mssgle:LineSegment
-                    End="8.8666662030746,71.1666684299041" />
+                    End="0,42.700000392595" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - upload data to Dim Airport.Paths[other rows]"
+          TopLeft="426.416660689645,288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.066668037309"
+              Start="0,0"
+              End="0,45.566668037309">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.566668037309" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-24.3920703125,17.9088222999045,48.784140625,9.7490234375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
